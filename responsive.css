@@ -1,0 +1,109 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+section {
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Navbar with visible background color */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4CAF50; /* Initial background color */
+    padding: 15px 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar flexbox layout */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    color: #ffeb3b;
+}
+
+/* Change navbar color when scrolled */
+.scrolled {
+    background-color: #333; /* Dark background when scrolled */
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+/* Section styles */
+section {
+    padding-top: 70px;
+    text-align: center;
+}
+
+#home {
+    background-color: #f2f2f2;
+}
+
+#about {
+    background-color: #ffeb3b;
+}
+
+#services {
+    background-color: #4caf50;
+    color: white;
+}
+
+#contact {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* Responsive navbar for smaller screens */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+
+/* Ensure sections fit smaller screens */
+@media (max-width: 768px) {
+    section {
+        padding-top: 150px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .navbar ul li a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
